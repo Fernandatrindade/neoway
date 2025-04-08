@@ -1,0 +1,26 @@
+usuario:
+  usuario1: 'Fernanda'
+  usuario2: 'Jaqueline'
+  usuario3: 'Rafael'
+  usuario_null: null
+  usuarioEdit: 'Fernanda Teste'
+  usuarioEdit2: 'Fernanda Trindade'
+
+"email":
+  email1: 'fernanda7@com.br'
+  email2: 'jaqueline7@com.br'
+  email3: 'rafael7@com.br'
+  email4: 'testefer1@com.br'
+  email_null: null
+
+"password":
+  password: 'teste123'
+  password_null: null
+
+
+"administrador":
+  administradorTrue: 'true'
+  administradorFalse: 'false'
+  adm_null: null
+
+
