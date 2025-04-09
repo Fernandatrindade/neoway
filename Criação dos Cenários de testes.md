@@ -300,8 +300,8 @@ Foi realizado uma automação de teste para o fluxo do carrinho de compras, fora
 
  <h2>Desafio: Testes de Performance</h2>
  Foi realizo o teste de performace na ferramenta do Jmetter, execucando 5 usuarios por 5 minutos conforme os prints abaixo.
- Não teve nenhum erro. Por ser uma requisição simples as requisições executão em menos de 1 segundo um tempo considerado muito bom. 
- Segue abaixo o script do teste de performace, para executar precisa do Jmetter instalado e do Java.
+ Não teve nenhum erro. Por ser uma requisição simples as requisições executou em menos de 1 segundo um tempo considerado muito bom. 
+ Segue dentro da pasta neoway o script do teste de performace, para executar precisa do Jmetter instalado e do Java.
  ![image](https://github.com/user-attachments/assets/0e623738-f7b2-43fd-b81f-80f7dd2f1931)
 
  ![image](https://github.com/user-attachments/assets/59fc1307-9af5-4d0f-a7fc-382de96688e0)
