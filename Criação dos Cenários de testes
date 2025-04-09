@@ -1,0 +1,314 @@
+Projeto de Enriquecimento de Dados de Livros  
+
+Observação:  
+
+- Qual é o formato do arquivo de edição ex: PDF, TXT, JPEG???  
+
+- Qual é o formado do arquivo que será entregue para o cliente e quais os detalhes dos livros ex: o resumo do livro, título? 
+
+ - Qual é o tamanho do arquivo que o cliente pode adicionar no sistema? 
+
+- Pode editar livros em lote? 
+
+** Cenário de teste 01: Adição de livros na base já existente através de um arquivo com as informações como título e as edições dos livros ** 
+
+Dado que esteja logado no sistema da livraria 
+
+Quando adiciono um arquivo com as informações dos títulos dos livros  
+
+E as edições 
+
+Então as informações e salva com sucesso no banco de dados 
+
+E as os livros adicionados devem ser atualizados 
+
+E verificar no banco se as informações foram salvas nas colunas corretas  
+
+** Cenário de teste 02: Adição de livros novos na base através de um arquivo com as informações como título e as edições dos livros **
+
+Dado que esteja logado no sistema da livraria 
+
+Quando adiciono um arquivo com os livros novos contendo as informações dos títulos dos livros  
+
+E as edições 
+
+Então os livros são adicionados com sucesso na base de dados  
+
+E verificar no banco se as informações foram salvas nas colunas corretas  
+
+** Cenário de teste 03: O sistema deve exportar um arquivo com detalhes dos livros **
+
+Dado que esteja logado no sistema da livraria 
+
+Quando finalizar a importação do arquivo   
+
+Então o sistema irá exportar um arquivo com os detalhes dos livros salvo no banco de dados 
+
+** Cenário de teste 04: Editar e aprimorar a qualidade dos livros fornecidos pelo cliente ** 
+ 
+Dado que esteja logado no sistema da livraria 
+
+E seleciono um livro  
+
+Quando realizo a edição do informações do livro selecionado   
+
+Então o sistema atualiza as informações do livro 
+
+E verificar no banco se as informações foram atualizadas corretamente 
+
+ ** Cenário de teste 05: Facilitar a busca de informações detalhadas sobre os livros ** 
+
+Dado que esteja logado no sistema da livraria 
+
+Quando digito na pesquisa as informações do livro como o título e edição.  
+
+Então o sistema deverá realizar a busca pelo livro de acordo com a pesquisa 
+
+** Cenário de teste 06: Adição de livros de um livro na base de dados **
+
+Dado que esteja logado no sistema da livraria 
+
+Quando adiciono um livro  
+
+E informo todas as informações necessários do livro 
+
+Então as informações e salva com sucesso no banco de dados 
+
+E verificar no banco se as informações foram salvas nas colunas corretas 
+
+E um arquivo e exportado com os livros salvo na base de dados 
+
+** Cenário de teste 07: Desativar um livro no sistema ** 
+
+Dado que esteja logado no sistema da livraria 
+
+Quando seleciono um livro que desejo desativar  
+
+E clico em desativar  
+
+Então o livro será desativado com sucesso do sistema 
+
+E um arquivo e exportado com os livros salvo na base de dados  
+
+E com os livros desativados 
+
+
+<h2>Desafio: Testes Funcionais- API 
+
+Cenário 1 Validação da funcionalidade de usuários: 
+
+ 
+
+Cadastrar 
+
+CT01: Cadastrar um novo usuário 	como administrador 
+
+Dado que esteja na API https://serverest.dev/usuarios 
+
+Quando informo os dados do novo usuário  
+
+E o administrador como TRUE 
+
+E realiza um post  
+
+Então exibido o status code 201 no response e exibido a mensagem de “Cadastro Realizado com Sucesso” 
+
+E o ID  
+
+ 
+
+CT02: Cadastrar um novo usuário 	não administrador 
+
+Dado que esteja na API https://serverest.dev/usuarios 
+
+Quando informo os dados do novo usuário  
+
+E o administrador como FALSE 
+
+E realiza um post  
+
+Então exibido o status code 201 no response e exibido a mensagem de “Cadastro Realizado com Sucesso” 
+
+E o ID 
+
+ 
+
+CT03: Cadastrar um usuário existente 
+
+Dado que esteja na API https://serverest.dev/usuarios 
+
+Quando informo os Email do usuário existente  
+
+E o administrador como FALSE/TRUE 
+
+E realiza um post  
+
+Então exibido o status code 400 no response e exibido a mensagem de “Este Email já está sendo usado” 
+
+ 
+
+ 
+
+CT04: Cadastrar um usuário existente com email diferente 
+
+Dado que esteja na API https://serverest.dev/usuarios 
+
+Quando informo os dados de um usuário existente 
+
+E com um email diferente 
+
+E o administrador como FALSE/TRUE 
+
+E realiza um post  
+
+Então exibido o status code 201 no response e exibido a mensagem de “Cadastro Realizado com Sucesso” 
+
+E o ID 
+
+ 
+
+Editar 
+
+CT05: Editar o nome do usuário existente  
+
+Dado que esteja na API https://serverest.dev/usuarios/ID 
+
+Quando edito o nome 
+
+E realiza um PUT 
+
+Então exibido o status code 200 no response e exibido a mensagem de “Registro alterado com sucesso” 
+
+ 
+
+CT06: Editar um usuário existente com um Email de outro usuário 
+
+Dado que esteja na API https://serverest.dev/usuarios/ID 
+
+Quando edito e coloco um Email de outro usuário 
+
+E realiza um PUT 
+
+Então exibido o status code 400 no response e exibido a mensagem de “Este Email já está sendo usado” 
+
+ 
+
+CT07: Realizar uma edição sem passar o ID do usuário 
+
+Dado que esteja na API https://serverest.dev/usuarios/ SEM O ID 
+
+Quando edito as informações necessária 
+
+E realiza um PUT 
+
+Então exibido o status code 405 no response e exibido a mensagem de “Não é possível realizar PUT em /usuários/. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.” 
+
+CT07: Realizar uma edição passando um ID do usuário que não existe na base 
+
+Dado que esteja na API https://serverest.dev/usuarios/ UM NOVO ID 
+
+Quando edito as informações necessária 
+
+E realiza um PUT 
+
+Então exibido o status code 201 no response e exibido a mensagem de “Cadastro Realizado com Sucesso” 
+
+E o um novo ID e criado 
+
+ 
+
+Deletar 
+
+CT08: Deletar um usuário passando o ID do usuário com um carrinho cadastrado 
+
+Dado que esteja na API https://serverest.dev/usuarios/ ID 
+
+E realiza um DELETE 
+
+Então exibido o status code 400 no response e exibido a mensagem de “Não é permitido excluir usuário com carrinho cadastrado” 
+
+ 
+
+CT09: Deletar um usuário passando o ID do usuário  
+
+Dado que esteja na API https://serverest.dev/usuarios/ ID 
+
+E realiza um DELETE 
+
+Então exibido o status code 200 no response e exibido a mensagem de “Registro excluído com sucesso” 
+
+ 
+
+CT10: Deletar um usuário sem passar o ID do usuário  
+
+Dado que esteja na API https://serverest.dev/usuarios/ SEM O ID 
+
+E realiza um DELETE 
+
+Então exibido o status code 405 no response e exibido a mensagem de “Não é possível realizar DELETE em /usuarios/. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.” 
+
+CT11: Deletar um usuário que já foi excluído  
+
+Dado que esteja na API https://serverest.dev/usuarios/  ID JA EXCLUIDO 
+
+E realiza um DELETE 
+
+Então exibido o status code 200 no response e exibido a mensagem de “Nenhum registro excluído.” 
+
+ 
+
+Buscar ou Listar usuários 
+
+ 
+
+CT11: Buscar usuário por ID 
+
+Dado que esteja na API https://serverest.dev/usuarios/  ID  do usuario 
+
+E realiza um GET 
+
+Então exibido o status code 200 no response e exibido os dados do usuário 
+
+ 
+
+CT12: Buscar usuário por ID que não existe 
+
+Dado que esteja na API https://serverest.dev/usuarios/  ID  do usuário que não existe 
+
+E realiza um GET 
+
+Então exibido o status code 400 no response e exibido os dados do usuário 
+
+ 
+
+BUG: Ao executar a API de Listar o Usuário cadastrado e filtrar pelo ID está dando o erro "id": "id não é permitido" 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
