@@ -10,7 +10,7 @@ Observação:
 
 - Pode editar livros em lote? 
 
-<b>Cenário de teste 01: Adição de livros na base já existente através de um arquivo com as informações como título e as edições dos livros<\b>
+Cenário de teste 01: Adição de livros na base já existente através de um arquivo com as informações como título e as edições dos livros
 
 Dado que esteja logado no sistema da livraria 
 
@@ -24,7 +24,7 @@ E as os livros adicionados devem ser atualizados
 
 E verificar no banco se as informações foram salvas nas colunas corretas  
 
-** Cenário de teste 02: Adição de livros novos na base através de um arquivo com as informações como título e as edições dos livros **
+*** Cenário de teste 02: Adição de livros novos na base através de um arquivo com as informações como título e as edições dos livros ***
 
 Dado que esteja logado no sistema da livraria 
 
