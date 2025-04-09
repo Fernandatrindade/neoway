@@ -14,7 +14,7 @@ Para executar a atuomação dos testes pode ser usados as classes Runners, ou os
 
 `mvn test`
 
-```cd existing_repo
+`cd existing_repo
 git clone https://github.com/Fernandatrindade/neoway.git
 git branch -M main
-git push -uf origin main```
+git push -uf origin main`
