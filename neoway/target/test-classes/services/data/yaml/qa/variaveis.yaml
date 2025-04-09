@@ -23,4 +23,8 @@ usuario:
   administradorFalse: 'false'
   adm_null: null
 
+"nomeProduto":
+  nomeProduto1: "Produto_Fernanda"
+  nomeProduto2: "Produto_teste_Fernanda 2"
+
 

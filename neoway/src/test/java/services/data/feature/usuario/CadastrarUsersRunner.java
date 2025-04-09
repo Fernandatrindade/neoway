@@ -2,7 +2,7 @@ package services.data.feature.usuario;
 
 import com.intuit.karate.junit5.Karate;
 
-class UsersRunner {
+class CadastrarUsersRunner {
     
     @Karate.Test
     Karate testUsers() {

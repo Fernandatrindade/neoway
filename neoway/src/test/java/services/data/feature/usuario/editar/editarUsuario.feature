@@ -14,7 +14,7 @@
       * def administrador = <administrador>
       * def body = read('classpath:services/data/payload/usuarioPayload.json')
 
-      #Pré requisito: realizar uma busca pelo email e pegar o ID de usuario
+      #Pré requisito: realizar uma busca pelo email para pegar o ID de usuario
 
       Given url urlBasicNeoway
       And path <buscar>
