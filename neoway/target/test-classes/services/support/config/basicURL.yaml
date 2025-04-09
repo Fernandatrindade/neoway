@@ -1,0 +1,3 @@
+qa:
+  env: 'qa'
+  urlBasicNeoway: 'https://serverest.dev'

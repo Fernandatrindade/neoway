@@ -1,0 +1,12 @@
+{
+"produtos": [
+{
+"idProduto": "#(id_Produto1)",
+"quantidade": 3
+},
+{
+"idProduto": "#(id_Produto2)",
+"quantidade": 2
+}
+]
+}
