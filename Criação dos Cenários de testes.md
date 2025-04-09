@@ -10,7 +10,7 @@ Observação:
 
 - Pode editar livros em lote? 
 
-** Cenário de teste 01: Adição de livros na base já existente através de um arquivo com as informações como título e as edições dos livros ** 
+<b> Cenário de teste 01: Adição de livros na base já existente através de um arquivo com as informações como título e as edições dos livros <\b>
 
 Dado que esteja logado no sistema da livraria 
 
@@ -93,7 +93,7 @@ E um arquivo e exportado com os livros salvo na base de dados
 E com os livros desativados 
 
 
-<h2>Desafio: Testes Funcionais- API 
+<h2>Desafio: Testes Funcionais- API </h2>
 
 Cenário 1 Validação da funcionalidade de usuários: 
 
